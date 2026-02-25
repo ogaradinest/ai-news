@@ -95,7 +95,7 @@ const ImplementationChecklist = () => {
                 <button
                   data-testid={`phase-${phaseIndex}`}
                   onClick={() => setExpandedPhase(isExpanded ? -1 : phaseIndex)}
-                  className="w-full"
+                  className="w-full relative z-10"
                 >
                   <div 
                     className={`glass-card rounded-2xl p-6 transition-all ${
