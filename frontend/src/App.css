@@ -1,34 +1,127 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Custom styles for AI Automation Guide */
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
+/* Line clamp utilities */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Custom slider track color */
+[data-radix-slider-track] {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-radix-slider-range] {
+    background: #3B82F6 !important;
+}
+
+[data-radix-slider-thumb] {
+    background: white !important;
+    border: 2px solid #3B82F6 !important;
+}
+
+/* Progress bar styling */
+[data-radix-progress-indicator] {
+    background: linear-gradient(90deg, #3B82F6 0%, #10B981 100%) !important;
+}
+
+/* Smooth scroll for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus states */
+*:focus-visible {
+    outline: 2px solid #3B82F6;
+    outline-offset: 2px;
+}
+
+/* Button hover effects */
+button {
+    transition: all 0.2s ease;
+}
+
+/* Card hover lift effect */
+.glass-card {
+    will-change: transform;
+}
+
+/* Animate number changes */
+@keyframes countUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-count-up {
+    animation: countUp 0.5s ease-out;
+}
+
+/* Grid pattern background */
+.grid-pattern {
+    background-image: 
+        linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Radial gradient for spotlight effect */
+.spotlight {
+    background: radial-gradient(
+        600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(59, 130, 246, 0.06),
+        transparent 40%
+    );
+}
+
+/* Custom selection color */
+::selection {
+    background: rgba(59, 130, 246, 0.3);
     color: white;
 }
 
-.App-link {
-    color: #61dafb;
+/* Mobile touch feedback */
+@media (hover: none) {
+    .glass-card:active {
+        transform: scale(0.98);
+    }
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Ensure proper tab styling */
+[data-state="active"] {
+    position: relative;
+}
+
+/* Modal backdrop blur */
+[data-state="open"] > [role="dialog"] {
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Tooltip styling */
+[role="tooltip"] {
+    background: #1a1a1a !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }

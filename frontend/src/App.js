@@ -1,52 +1,71 @@
-import { useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import HeroSection from "./components/HeroSection";
+import UseCasesSection from "./components/UseCasesSection";
+import ROICalculator from "./components/ROICalculator";
+import ToolComparison from "./components/ToolComparison";
+import ImplementationChecklist from "./components/ImplementationChecklist";
+import FloatingNav from "./components/FloatingNav";
+import { Toaster } from "./components/ui/sonner";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+function App() {
+  const [activeSection, setActiveSection] = useState('hero');
 
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
+  const handleNavigate = useCallback((sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  };
+  }, []);
 
+  // Track active section on scroll
   useEffect(() => {
-    helloWorldApi();
+    const sections = ['use-cases', 'roi-calculator', 'tools', 'checklist'];
+    
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 200;
+      
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(sectionId);
+            return;
+          }
+        }
+      }
+      
+      if (window.scrollY < 400) {
+        setActiveSection('hero');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
-
-function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+    <div className="min-h-screen bg-[#050505]" data-testid="app-container">
+      <HeroSection onNavigate={handleNavigate} />
+      <UseCasesSection />
+      <ROICalculator />
+      <ToolComparison />
+      <ImplementationChecklist />
+      <FloatingNav activeSection={activeSection} onNavigate={handleNavigate} />
+      <Toaster />
+      
+      {/* Footer */}
+      <footer className="py-12 px-6 border-t border-white/5" data-testid="footer">
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-[#52525B] text-sm">
+            AI Automation Guide for SMBs • 2025
+          </p>
+          <p className="text-[#3B82F6] text-xs mt-2">
+            Built for service & manufacturing businesses
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
