@@ -1,0 +1,149 @@
+{
+  "project_name": "AI Automation for SMBs",
+  "design_philosophy": {
+    "identity": "The Anti-AI Designer",
+    "core_principles": [
+      "Fusion over Imitation: Mix Industrial Precision with Digital Neon.",
+      "Emotion First: The user should feel 'Empowered' and 'Ahead of the Curve'.",
+      "Content is King: Every ROI stat must look like a headline.",
+      "Zoom In: Use macro shots of robotic arms and focused team faces.",
+      "Negative Space: Use deep black voids to make data pop."
+    ],
+    "anti_patterns": [
+      "Purple/Teal gradients everywhere (Use distinct, solid electric colors instead).",
+      "Center-Everything (Use asymmetrical bento grids).",
+      "Generic Stock Photos (Use high-contrast, moody industrial/office shots)."
+    ]
+  },
+  "typography": {
+    "headings": {
+      "family": "Outfit",
+      "weights": ["600", "700"],
+      "tracking": "tight",
+      "usage": "Hero titles, Section headers, ROI metrics"
+    },
+    "body": {
+      "family": "Inter",
+      "weights": ["400", "500"],
+      "usage": "Paragraphs, list items, tool descriptions"
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "usage": "Code snippets, data values, technical specs"
+    }
+  },
+  "colors": {
+    "theme": "dark",
+    "palette": {
+      "background": {
+        "default": "#050505",
+        "paper": "#0A0A0A",
+        "subtle": "#111111"
+      },
+      "text": {
+        "primary": "#FFFFFF",
+        "secondary": "#A1A1AA",
+        "muted": "#52525B"
+      },
+      "primary": {
+        "main": "#3B82F6",
+        "glow": "0 0 20px rgba(59, 130, 246, 0.5)"
+      },
+      "accent": {
+        "ai": "#8B5CF6",
+        "success": "#10B981",
+        "warning": "#F59E0B",
+        "error": "#EF4444"
+      },
+      "border": {
+        "default": "#27272A",
+        "active": "#3F3F46"
+      }
+    }
+  },
+  "ui_components": {
+    "cards": {
+      "style": "Glassmorphism with Neon Edges",
+      "classes": "bg-white/5 backdrop-blur-md border border-white/10 hover:border-primary/50 transition-all duration-300"
+    },
+    "buttons": {
+      "primary": "bg-primary text-white hover:bg-primary/90 shadow-[0_0_15px_rgba(59,130,246,0.5)] rounded-full px-8 py-3 font-medium tracking-wide",
+      "secondary": "bg-white/10 text-white hover:bg-white/20 border border-white/10 rounded-full px-6 py-2"
+    },
+    "inputs": {
+      "style": "Minimalist Dark",
+      "classes": "bg-transparent border-b border-white/20 focus:border-primary focus:outline-none py-2 text-white placeholder-white/30 w-full transition-colors"
+    },
+    "navigation": {
+      "style": "Floating Island",
+      "classes": "fixed bottom-8 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 shadow-2xl z-50 flex gap-6 items-center"
+    }
+  },
+  "layout_strategies": {
+    "dashboard": "Bento Grid (Asymmetrical)",
+    "landing": "Scroll-triggered Section Reveals",
+    "comparison_table": "Horizontal Scroll with Sticky First Column"
+  },
+  "image_assets": {
+    "hero_backgrounds": [
+      {
+        "url": "https://images.unsplash.com/photo-1647427060118-4911c9821b82?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBhdXRvbWF0ZWQlMjBmYWN0b3J5JTIwcm9ib3RpY3N8ZW58MHx8fHwxNzcyMDU4OTk2fDA&ixlib=rb-4.1.0&q=85",
+        "alt": "Modern automated factory with orange robotic arms",
+        "usage": "Manufacturing Automation Hero"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1748346918817-0b1b6b2f9bab?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBvZmZpY2UlMjB0ZWFtJTIwd29ya2luZyUyMGNvbXB1dGVycyUyMGhhcHB5fGVufDB8fHx8MTc3MjA1ODk5N3ww&ixlib=rb-4.1.0&q=85",
+        "alt": "Modern office team working at desks",
+        "usage": "Service Business Hero"
+      }
+    ],
+    "context_images": [
+      {
+        "url": "https://images.unsplash.com/photo-1752614671052-92e18f534db1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBhdXRvbWF0ZWQlMjBmYWN0b3J5JTIwcm9ib3RpY3N8ZW58MHx8fHwxNzcyMDU4OTk2fDA&ixlib=rb-4.1.0&q=85",
+        "alt": "Close up of robot arm",
+        "usage": "ROI Calculator Background"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1758876022836-70b89d3e6944?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB0ZWFtJTIwd29ya2luZyUyMGNvbXB1dGVycyUyMGhhcHB5fGVufDB8fHx8MTc3MjA1ODk5N3ww&ixlib=rb-4.1.0&q=85",
+        "alt": "Woman talking on phone at desk",
+        "usage": "Testimonials / Success Stories"
+      }
+    ],
+    "logos": {
+      "zapier": "https://upload.wikimedia.org/wikipedia/commons/8/89/Zapier_logo.svg",
+      "chatgpt": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+      "claude": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Claude_AI_logo.svg",
+      "elevenlabs": "https://commons.wikimedia.org/wiki/File:ElevenLabs_Logo_03.svg",
+      "generic_ai": "https://cdn-icons-png.flaticon.com/512/8649/8649607.png"
+    }
+  },
+  "content_strategy": {
+    "tone": "Confident, Direct, Future-Focused",
+    "microcopy": {
+      "cta": "Automate Now",
+      "loading": "Calculating Efficiency...",
+      "success": "Optimization Complete"
+    }
+  },
+  "libraries": {
+    "charts": "Recharts (Customized with neon strokes)",
+    "animations": "Framer Motion",
+    "icons": "Lucide React"
+  },
+  "universal_guidelines": [
+    "Do NOT use gradients on text unless it's a very subtle shine.",
+    "Dark mode is the default. Do not create a light mode unless specifically requested by user toggle (but default to dark).",
+    "Use 'Outfit' font for all headings. Import from Google Fonts.",
+    "Borders should never be solid grey. Use white/10 or white/5.",
+    "All cards must have a subtle hover lift (-2px) and glow.",
+    "Ensure 'data-testid' is present on all interactive elements."
+  ],
+  "instructions_to_main_agent": [
+    "1. Install 'Outfit' font from Google Fonts immediately in index.css.",
+    "2. Set the global background to #050505.",
+    "3. Create a 'Layout' component that handles the navigation and footer.",
+    "4. Use the provided image URLs for the specific sections (Manufacturing vs Service).",
+    "5. When building the ROI calculator, use the 'Close up of robot arm' image as a subtle background overlay with 90% opacity black layer on top.",
+    "6. For the Tool Comparison, use the logos provided. If a logo fails to load, fallback to a text badge with the tool name."
+  ]
+}
