@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ai-news/static/css/main.49df5894.css",
+    "main.js": "/ai-news/static/js/main.ad4abbc9.js",
+    "index.html": "/ai-news/index.html",
+    "main.49df5894.css.map": "/ai-news/static/css/main.49df5894.css.map",
+    "main.ad4abbc9.js.map": "/ai-news/static/js/main.ad4abbc9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.49df5894.css",
+    "static/js/main.ad4abbc9.js"
+  ]
+}
